@@ -20,14 +20,20 @@ public class MainActivity extends AppCompatActivity {
 
         res.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openResources();
-            }
+            public void onClick(View v) {openResources();}
+        });
+        forum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {openForum();}
         });
 
     }
     public void openResources() {
         Intent intent = new Intent(this, Resources.class);
+        startActivity(intent);
+    }
+    public void openForum() {
+        Intent intent = new Intent(this, register.class);
         startActivity(intent);
     }
 }
