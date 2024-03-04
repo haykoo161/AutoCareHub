@@ -6,12 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class hub extends AppCompatActivity {
 
-    private Button button;
+    FirebaseAuth auth;
+    Button button;
+    TextView textView;
+    FirebaseUser user;
+
 
     Button res, forum, about_app;
 
@@ -20,11 +27,26 @@ public class hub extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hub);
+        auth = FirebaseAuth.getInstance();
+        button = findViewById(R.id.logout);
+        user = auth.getCurrentUser();
+
+
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+
+            }
+        });
+
 
         res = findViewById(R.id.res);
         forum = findViewById(R.id.forum);
         about_app = findViewById(R.id.about_app);
-
+//
         about_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

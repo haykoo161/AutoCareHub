@@ -22,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:orientation="vertical"
@@ -71,6 +72,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="650dp">
+
+
+        <Button
+            android:id="@+id/logout"
+            android:text="@string/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/lavender"
+            android:textColor="@color/black"
+            />
+
+
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
+
+
 
