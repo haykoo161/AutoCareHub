@@ -9,4 +9,5 @@
     <string name="click_to_login">Click to login</string>
     <string name="click_to_register">click_to_register</string>
     <string name="logout">Logout</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>
